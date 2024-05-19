@@ -1,159 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Exit The Plugin- Project</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> 
-</head>
+<html>
+    <head>
+        <title>page1</title>
+      <link rel = "stylesheet" href="C:\Users\hp\Desktop\project.css">
+      <link rel= "stylesheet" href="C:\Users\hp\Desktop\project.html">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        p{
+            color:rgb(20, 16, 1);
+          padding: 20px;
+        }
+        .btn-text-left{
+	        text-align: left;	
+        }
+        
 
-<body>
-    <div class="container">s
-        <div class="header">
-            <a href="#"><img src="./logo2.jpg" alt="not found" name="Insert_logo" width="200" height="150" id="Insert_logo" /></a> 
-        </div>
-
-        <h3 id="btn1">Sign Up</h3>
-        <h3 id="btn2" onclick="redirectToAnotherPage()">Cart</h3>
-        <script>
-            function redirectToAnotherPage() {
-              // Replace 'destination.html' with the actual URL of the webpage you want to redirect to.
-              window.location.href = 'product.html';
-            }
-          </script>
-
-        <!-- Search bar -->
-        <div class="searchbtn">
-            <form name="search">
-                <input type="text" class="input" id="searchInput" onkeyup="autocompleteFunction()" autocomplete="off">
-
-            </form>
-            <i class="fas fa-search"></i>
-            <ul id="productline"></ul>
-        </div>
-        <script>
-            var productNames = ["Nerf Gun", "Hot Wheels", "Action Figure", "UNO"]; // Add your product names here
+    </style>
     
-            function autocompleteFunction() {
-                var input, filter, i, txtValue;
-                input = document.getElementById("searchInput");
-                filter = input.value.toUpperCase();
-                var suggestions = [];
     
-                // Filter product names based on user input
-                for (i = 0; i < productNames.length; i++) {
-                    txtValue = productNames[i];
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        suggestions.push(productNames[i]);
-                    }
-                }
+    <body style="background-color:rgb(169, 226, 247);color: rgb(18, 15, 18);; padding: 20px; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+    <div style="padding:10px 200px; border: 5px solid rgb(9, 9, 9) ;border-radius: 20px;">
+        <fieldset>
+        <legend>CAREER</legend>
     
-                // Display suggestions
-                displaySuggestions(suggestions);
-            }
-    
-            function displaySuggestions(suggestions) {
-                var productline = document.getElementById("productline");
-                productline.innerHTML = ""; // Clear previous suggestions
-    
-                // Create and append list items for each suggestion
-                for (var i = 0; i < suggestions.length; i++) {
-                    var li = document.createElement("li");
-                    li.textContent = suggestions[i];
-                    productline.appendChild(li);
-                }
-            }
-        </script>
-
-
-        <!-- Banner -->
-        <img id="banner" src="banner.png" alt="Banner Image">
-
-        <!-- Products -->
-        <section class="products">
-            <div class="product-card">
-                <div class="badge">Hot</div>
-                <div class="product-tumb">
-                    <img src="./img/toy1.jpg" alt="">
-                </div>
-                <div class="product-details">
-                    <span class="product-catagory">Toys</span>
-                    <h4><a href="">Nerf Gun</a></h4>
-                    
-                    <div class="product-bottom-details">
-                        <div class="product-price"><small>$100.99</small>$60</div>
-                        <div class="product-links">
-                            <a href=""><i class="fa fa-heart"></i></a>
-                            <a href="product.html"><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="badge">Hot</div>
-                <div class="product-tumb">
-                    <img src="./img/toy2.jpg" alt="">
-                </div>
-                <div class="product-details">
-                    <span class="product-catagory">Toys</span>
-                    <h4><a href="">Hot Wheels</a></h4>
-                    
-                    <div class="product-bottom-details">
-                        <div class="product-price"><small>$130.99</small>$75</div>
-                        <div class="product-links">
-                            <a href=""><i class="fa fa-heart"></i></a>
-                            <a href="product.html"><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="badge">Hot</div>
-                <div class="product-tumb">
-                    <img src="./img/gun1.jpg" alt="">
-                </div>
-                <div class="product-details">
-                    <span class="product-catagory">Toys</span>
-                    <h4><a href="">Action Figure</a></h4>
-                    <div class="product-bottom-details">
-                        <div class="product-price"><small>$180.99</small>$45</div>
-                        <div class="product-links">
-                            <a href=""><i class="fa fa-heart"></i></a>
-                            <a href="product.html"><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="badge">Hot</div>
-                <div class="product-tumb">
-                    <img src="./img/toy4.jpg" alt="">
-                </div>
-                <div class="product-details">
-                    <span class="product-catagory">Toys</span>
-                    <h4><a href="">UNO</a></h4>
-                    <div class="product-bottom-details">
-                        <div class="product-price"><small>$120.99</small>$5</div>
-                        <div class="product-links">
-                            <a href=""><i class="fa fa-heart"></i></a>
-                            <a href="product.html"><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                </section>
-                <br>
-        <div class="lightbox">
-            <div class="box">
-                <h2>Checkout these crazy discounts on our selected products! </h2>
-                  <a href="product.html" class="shopping" style=" margin-top: 0; padding-right: 15px; padding-left: 15px;">SALE</a>
-            </div>
-          </div>
-        <script src="script.js"></script>
-
-        <div class="footer">
-            <!-- Your footer content goes here -->
-        </div>
+     
+      
+        <p style="text-align: center;">
+            Rise to fame
+            Moose Wala released his first song <a href="https://www.youtube.com/watch?v=TY7qQfsaLvI" style="color:  rgb(198, 15, 15) ;"><u>"G Wagon"</u></a> in 2017 while living in Brampton. Later that year, he had his breakthrough with the song <a href="https://www.youtube.com/watch?v=GgmFC8y8q3k" style="color:  rgb(198, 15, 15) ;"><u>"So High"</u></a>, a gangster rap with music producer Byg Byrd. The song won him the 2017 Best Lyricist award at the Brit Asia TV Music Awards. Following this, he joined Brown Boys Records along with Sunny Malton and Byg Byrd.
+            
+            He began to perform live shows in India in 2018, and performed numerous shows in Canada. He continued his success with singles like <a href="https://www.youtube.com/watch?v=GmS6fe2IxZA" style="color: rgb(198, 15, 15) ;"><u>"Issa Jatt"</u></a> , <a href="https://www.youtube.com/watch?v=D4fC4HVpP3M" style="color: rgb(198, 15, 15) ;"><u>"It's All About You"</u></a> and <a href="https://www.youtube.com/watch?v=rMQ_TUEwQEs" style="color:  rgb(198, 15, 15) ;"><u>"Just Listen"</u></a> In May 2018, he released the single <a href="https://www.youtube.com/watch?v=gNOlJeet7QY" style="color:rgb(198, 15, 15);"><u>"Tochan"</u></a> followed by "Famous" which entered the UK Asian Top 40 Chart.
+            
+            At the 2018 PTC Punjabi Music Awards, he was nominated for the Best New Age Sensation award for <a href="" style="color:  rgb(198, 15, 15) ;"><u>"Issa Jatt"</u></a>
+           <br>
+            In August 2018, he released his first film soundtrack song, <a href="https://www.youtube.com/watch?v=pZbYSwCEdA0" style="color: rgb(198, 15, 15);"> <u>"Dollar"</u></a>, for the film Dakuaan Da Munda.  
+        </p>
     </div>
+    </fieldset>
+    <br>
+    <div class="def">
+    <a href="C:\Users\hp\Desktop\projrct\page1.html">previous</a>
+    </div>
+    <div class="fed">
+        <a href="C:\Users\hp\Desktop\projrct\page5.html">Next</a>
+    </div>  
 </body>
+
+    <button class="btn-text-left"><a href="#" class="top">𝕋𝕠𝕡ᛏ</a></button>
+
 </html>
